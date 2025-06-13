@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>我的静态网站</title>
+  <style>
+    body {
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f0f2f5;
+      color: #333;
+    }
+    header {
+      background-color: #4a90e2;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    main {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+    h1 {
+      margin-bottom: 10px;
+    }
+    p {
+      line-height: 1.6;
+    }
+    button {
+      background-color: #4a90e2;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      margin-top: 20px;
+      cursor: pointer;
+      border-radius: 4px;
+      font-size: 16px;
+    }
+    button:hover {
+      background-color: #357abd;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      color: #777;
+      border-top: 1px solid #ddd;
+      margin-top: 60px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>欢迎来到我的静态网站</h1>
+  </header>
+
+  <main>
+    <p>这是一个简单的静态网页示例，使用 HTML、CSS 和 JavaScript 编写。</p>
+    <p>点击下面的按钮，页面会显示当前时间。</p>
+    <button id="showTimeBtn">显示当前时间</button>
+    <p id="timeDisplay" style="margin-top: 15px; font-weight: bold;"></p>
+  </main>
+
+  <footer>
+    &copy; 2025 我的静态网站
+  </footer>
+
+  <script>
+    const btn = document.getElementById('showTimeBtn');
+    const timeDisplay = document.getElementById('timeDisplay');
+
+    btn.addEventListener('click', () => {
+      const now = new Date();
+      timeDisplay.textContent = '当前时间：' + now.toLocaleString();
+    });
+  </script>
+</body>
+</html>
